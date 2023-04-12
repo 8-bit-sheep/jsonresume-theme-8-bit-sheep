@@ -1,1 +1,1 @@
-# jsonresume-theme-8bs
+# jsonresume-theme-8-bit-sheep
