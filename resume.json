@@ -1,0 +1,269 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/schema.json",
+  "basics": {
+    "name": "Pässi Villanen",
+    "label": "Software Engineer",
+    "email": "pvillanen@mail.com",
+    "phone": "+358 40 1234567",
+    "url": "https://www.paissivillanen.example.com",
+    "summary": "Pässi hails from [Tampere](https://en.wikipedia.org/wiki/Tampere). Holds a bachelor's degree from the *Tampere University* and a master's degree from *Aalto University*. Before starting **Pässisoft**, he worked for **Finnair** as a part time software developer. While his work focuses on *applied information theory*, mostly *optimizing lossless compression* schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from *quantum computing* to *chaos theory*. He could tell you about it, but THAT would NOT be a *length-limited* conversation!",
+    "location": {
+      "city": "Tampere",
+      "countryCode": "FI",
+      "region": "Pirkanmaa"
+    },
+    "image": "https://8-bit-sheep.com/images/sheep_placeholder.jpg",
+    "profiles": [
+      {
+        "url": "https://gitplace.com/pvillanen"
+      },
+      {
+        "url": "https://linkedin.com/in/paissivillanen"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "CyberSec Finland",
+      "location": "Helsinki, Finland",
+      "position": "Software Developer",
+      "url": "https://www.cybersecfinland.com",
+      "startDate": "2017-01-10",
+      "summary": "CyberSec Finland is a Finnish cyber security company that provides innovative solutions to protect businesses and individuals from cyber attacks. As a Software Developer at the company, I was responsible for developing and maintaining the company's flagship product, which provides advanced threat detection and response capabilities.",
+      "highlights": [
+        "Developed and maintained the company's flagship product for advanced threat detection and response",
+        "Collaborated with cross-functional teams to ensure product functionality and customer satisfaction",
+        "Designed and implemented custom software solutions for client needs",
+        "Researched and evaluated new technologies and tools to improve product capabilities",
+        "Provided technical support and troubleshooting assistance to clients"
+      ]
+    },
+    {
+      "name": "FinTech Innovations",
+      "location": "Helsinki, Finland",
+      "position": "Senior Software Engineer",
+      "url": "https://www.fintechinnovations.fi/",
+      "startDate": "2014-05-01",
+      "endDate": "2016-12-31",
+      "summary": "FinTech Innovations is a Finnish financial technology company that provides cutting-edge solutions for the banking and finance industry. As a Senior Software Engineer at the company, I was responsible for leading the development of a new mobile banking app that resulted in a 50% increase in user engagement.",
+      "highlights": [
+        "Led the development of a new mobile banking app resulting in a 50% increase in user engagement",
+        "Collaborated with cross-functional teams to ensure app functionality and customer satisfaction",
+        "Designed and implemented scalable software solutions for the finance industry",
+        "Managed and mentored a team of junior developers",
+        "Conducted code reviews and implemented best practices for software development"
+      ]
+    },
+    {
+      "name": "Grand Helsinki Hotel",
+      "location": "Helsinki, Finland",
+      "position": "Junior Software Developer",
+      "url": "https://www.grandhelsinkihotel.com/",
+      "startDate": "2011-03-15",
+      "endDate": "2014-04-30",
+      "summary": "Grand Helsinki Hotel is a 5-star hotel located in the heart of Helsinki. As a Junior Software Developer at the hotel, I was responsible for maintaining and developing the hotel's website and reservation system. During my time there, I implemented a new online booking system that resulted in a 25% increase in online bookings.",
+      "highlights": [
+        "Developed and maintained the hotel's website and reservation system",
+        "Implemented a new online booking system resulting in a 25% increase in online bookings",
+        "Worked closely with the hotel's marketing team to improve the hotel's online presence",
+        "Developed custom tools and applications to improve hotel operations",
+        "Provided technical support to hotel staff and guests"
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Sheep Farm",
+      "position": "Shepherd",
+      "url": "https://example.com/",
+      "startDate": "2012-10-11",
+      "endDate": "2014-12-24",
+      "summary": "As a shepherd, I took care of sheep and lambs on a farm in Finland. I learned how to raise and feed them, how to manage their health, and how to shear their wool. I enjoyed spending time outdoors and working with animals.",
+      "highlights": [
+        "Raised and cared for sheep and lambs",
+        "Managed their health and nutrition",
+        "Learned how to shear wool",
+        "Worked on a farm in Finland"
+      ]
+    },
+    {
+      "organization": "Finnish Red Cross",
+      "position": "Volunteer Tutor",
+      "url": "https://example.com/",
+      "startDate": "2011-01-16",
+      "endDate": "2012-10-10",
+      "summary": "As a volunteer tutor for the Finnish Red Cross, I taught math to young students in need. It was a fulfilling experience, and I enjoyed helping others learn. I also appreciated the opportunity to give back to my community.",
+      "highlights": [
+        "Taught math to students in need",
+        "Volunteered for the Finnish Red Cross",
+        "Helped others learn",
+        "Gave back to my community"
+      ]
+    }
+  ],
+
+  "education": [
+    {
+      "institution": "University of Helsinki",
+      "area": "Computer Science",
+      "studyType": "Master",
+      "startDate": "2016-09-01",
+      "endDate": "2018-05-31",
+      "score": "4.0",
+      "courses": [
+        "Machine Learning",
+        "Data Mining",
+        "Natural Language Processing",
+        "Computer Vision"
+      ]
+    },
+    {
+      "institution": "Häme University of Applied Sciences",
+      "area": "Computer Engineering",
+      "studyType": "Bachelor",
+      "startDate": "2012-09-01",
+      "endDate": "2016-05-31",
+      "score": "3.8",
+      "courses": [
+        "Programming Fundamentals",
+        "Web Development",
+        "Database Systems",
+        "Computer Networks"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Programming Languages",
+      "level": "Advanced",
+      "keywords": ["Python", "Java", "C++", "JavaScript", "TypeScript"]
+    },
+    {
+      "name": "Web Development",
+      "level": "Advanced",
+      "keywords": ["HTML", "CSS", "SASS", "React", "Angular", "Vue.js"]
+    },
+    {
+      "name": "Database Systems",
+      "level": "Intermediate",
+      "keywords": ["MySQL", "PostgreSQL", "Oracle", "MongoDB"]
+    },
+    {
+      "name": "Machine Learning",
+      "level": "Intermediate",
+      "keywords": ["Scikit-learn", "TensorFlow", "Keras", "PyTorch", "OpenCV"]
+    }
+  ],
+  "interests": [
+    {
+      "name": "Sheep Farming",
+      "keywords": ["Breeding", "Fleece Production", "Lambing", "Shearing"]
+    },
+    {
+      "name": "Knitting",
+      "keywords": ["Sweaters", "Socks", "Hats", "Mittens"]
+    },
+    {
+      "name": "Hiking",
+      "keywords": [
+        "Nature Trails",
+        "Backpacking",
+        "Camping",
+        "Wilderness Survival"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Finnish",
+      "fluency": "Native"
+    },
+    {
+      "language": "English",
+      "fluency": "Professional"
+    },
+    {
+      "language": "Swedish",
+      "fluency": "Professional"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Best Sheep Farmer of the Year",
+      "date": "2019-01-01",
+      "awarder": "Finnish Sheep Farmers Association",
+      "summary": "Received the award for my outstanding contributions to the sheep farming industry."
+    },
+    {
+      "title": "Best Knitted Sweater",
+      "date": "2018-01-01",
+      "awarder": "Finnish Knitting Association",
+      "summary": "Received the award for my hand-knitted sweater, which was made from wool produced on my farm."
+    }
+  ],
+  "certificates": [
+    {
+      "issuer": "Finnish Sheep Farmers Association",
+      "name": "Certified Sheep Farmer",
+      "date": "2019-01-01",
+      "url": "https://example.com/"
+    },
+    {
+      "name": "Certified Knitter",
+      "date": "2018-01-01",
+      "issuer": "Finnish Knitting Association",
+      "url": "https://example.com/"
+    }
+  ],
+  "publications": [
+    {
+      "name": "The Sheep Farm",
+      "publisher": "Finnish Sheep Farmers Association",
+      "releaseDate": "2019-01-01",
+      "url": "https://example.com/",
+      "summary": "A book about sheep farming in Finland."
+    }
+  ],
+  "references": [
+    {
+      "name": "Pekka Perä",
+      "reference": "Pekka is known for his love of nature and often spends time with his sheep, taking care of the lambs during the spring season."
+    },
+    {
+      "name": "Maija Mäki",
+      "reference": "Maija is a farmer who raises sheep and has won several awards for the quality of her wool."
+    },
+    {
+      "name": "Antti Ahonen",
+      "reference": "Antti has been a shepherd for over 20 years and has a vast knowledge of sheep and their behavior. He often shares his insights on his blog, which has a dedicated following among sheep enthusiasts."
+    }
+  ],
+  "projects": [
+    {
+      "name": "Lamb.js",
+      "description": "*Lamb.js* is a runtime for JavaScript and TypeScript that is based on the V8 JavaScript engine and the Rust programming language. It was created by a Finnish developer who is passionate about sheep farming and wanted to create a runtime that is focused on productivity while paying homage to their roots. It was announced in 2018 during a talk about the intersection of technology and agriculture.",
+      "highlights": [
+        "Designed for productivity and efficiency",
+        "Built with Rust and V8 JavaScript engine",
+        "Incorporates principles of sheep farming",
+        "Reflects the values of the Finnish developer"
+      ],
+      "startDate": "2018-05-13",
+      "url": "https://lambjs.com/",
+      "roles": ["creator"]
+    },
+    {
+      "name": "Finnish Node",
+      "description": "*Finnish Node* is an open-source, cross-platform, back-end JavaScript runtime environment that executes JavaScript code outside a web browser. It was developed and maintained by a Finnish developer who is passionate about technology and its impact on agriculture. They wanted to create a platform that is efficient and sustainable, just like their approach to sheep farming.",
+      "highlights": [
+        "Efficient and sustainable platform",
+        "Developed and maintained by a Finnish developer",
+        "Designed for the intersection of technology and agriculture"
+      ],
+      "startDate": "2011-08-26",
+      "endDate": "2018-05-12",
+      "url": "https://finnishnode.com/",
+      "roles": ["contributor", "evangelist"]
+    }
+  ]
+}
