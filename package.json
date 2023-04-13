@@ -1,6 +1,6 @@
 {
   "name": "jsonresume-theme-8-bit-sheep",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "private": false,
   "description": "8-bit-sheep JSON Resume Theme",
   "main": "dist/index.js",
