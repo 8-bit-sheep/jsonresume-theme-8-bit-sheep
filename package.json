@@ -6,7 +6,7 @@
   "main": "dist/index.js",
   "scripts": {
     "typecheck": "tsc --noEmit",
-    "build": "npm run clean && esbuild src/index.tsx --minify --bundle --outfile=dist/index.js --target=node16 --platform=node && cp index.html dist/index.html",
+    "build": "npm run clean && tsup && cp index.html dist/index.html",
     "clean": "rm -rf dist",
     "create-example-html": "resume export build/example.html --format html --theme ./dist",
     "create-example-pdf": "resume export build/example.pdf --format pdf --theme ./dist",
@@ -48,13 +48,13 @@
     "@typescript-eslint/eslint-plugin": "^5.56.0",
     "@vitejs/plugin-react": "^3.1.0",
     "@vitest/coverage-c8": "^0.29.8",
-    "esbuild": "^0.17.16",
     "eslint": "^8.37.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "jsdom": "^21.1.1",
     "resume-cli": "^3.0.8",
+    "tsup": "^6.7.0",
     "typescript": "^5.0.2",
     "vite": "^4.2.1",
     "vitest": "^0.29.8"
