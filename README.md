@@ -23,7 +23,7 @@ resume export resume.pdf --theme 8-bit-sheep
 
 ## Local development of the theme
 
-The theme uses React, styled-components, and Vite. The build is ran with `esbuild` and the build can be found under `./dist`
+The theme uses React, styled-components, and Vite. The builds are run with `tsup` and the bundle can be found from `./dist/index.js`
 
 ### Requirements
 
