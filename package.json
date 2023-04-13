@@ -5,13 +5,15 @@
   "description": "8-bit-sheep JSON Resume Theme",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc && cp index.html dist/index.html",
+    "typecheck": "tsc --noEmit",
+    "build": "npm run clean && esbuild src/index.tsx --bundle --outfile=dist/index.js --target=node16 --platform=node && cp index.html dist/index.html",
+    "clean": "rm -rf dist",
     "create-example-html": "resume export build/example.html --format html --theme ./dist",
     "create-example-pdf": "resume export build/example.pdf --format pdf --theme ./dist",
     "dev": "vite",
     "lint": "eslint .",
     "test": "vitest",
-    "prepack": "npm run build && npm run lint && CI=true npm run test && npm run create-example-html && npm run create-example-pdf"
+    "prepack": "npm run typecheck && npm run build && npm run lint && CI=true npm run test && npm run create-example-html && npm run create-example-pdf"
   },
   "files": [
     "dist"
@@ -46,6 +48,7 @@
     "@typescript-eslint/eslint-plugin": "^5.56.0",
     "@vitejs/plugin-react": "^3.1.0",
     "@vitest/coverage-c8": "^0.29.8",
+    "esbuild": "^0.17.16",
     "eslint": "^8.37.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
