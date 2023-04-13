@@ -15,7 +15,11 @@ export const render = (resume: unknown) => {
     const styleTags = sheet.getStyleTags();
     const htmlFile = readFileSync(`${__dirname}/index.html`, 'utf8');
     const $ = cheerio.load(htmlFile);
-    $('head>title').text(`${parsedResume.basics.name} | 8-bit-sheep`);
+    $('head>title').text(
+      `${
+        parsedResume.basics?.name ? `${parsedResume.basics.name} | ` : ''
+      }8-bit-sheep`
+    );
     $('head').append(styleTags);
     $('#root').remove();
     $('body>script').remove();
