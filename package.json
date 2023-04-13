@@ -11,7 +11,7 @@
     "dev": "vite",
     "lint": "eslint .",
     "test": "vitest",
-    "prepack": "npm run build"
+    "prepack": "npm run build && npm run lint && CI=true npm run test && npm run create-example-html && npm run create-example-pdf"
   },
   "files": [
     "dist"
