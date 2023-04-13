@@ -4,10 +4,13 @@ import { z } from 'zod';
  * Schema for resume generated from https://raw.githubusercontent.com/jsonresume/resume-schema/master/schema.json
  * with help of https://stefanterdell.github.io/json-schema-to-zod-react/
  *
- * This can be modified to suit our needs as we see fit.
+ * This schema has been modified with the following changes:
+ * - added an optional `private` field to the root object
+ * - catch-all converted to any's has been removed
  */
 export const resumeSchema = z
   .object({
+    private: z.boolean().optional(),
     $schema: z
       .string()
       .url()
@@ -17,7 +20,7 @@ export const resumeSchema = z
       .optional(),
     basics: z
       .object({
-        name: z.string(),
+        name: z.string().optional(),
         label: z.string().describe('e.g. Web Developer').optional(),
         image: z
           .string()
@@ -39,7 +42,8 @@ export const resumeSchema = z
           .optional(),
         summary: z
           .string()
-          .describe('Write a short 2-3 sentence biography about yourself'),
+          .describe('Write a short 2-3 sentence biography about yourself')
+          .optional(),
         location: z
           .object({
             address: z
@@ -88,7 +92,8 @@ export const resumeSchema = z
           )
           .optional(),
       })
-      .strict(),
+      .strict()
+      .optional(),
     work: z
       .array(
         z
@@ -112,7 +117,9 @@ export const resumeSchema = z
                   '^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$'
                 )
               )
-              .describe('e.g. 2014-06-29')
+              .describe(
+                'Similar to the standard date type, but each section after the year is optional. e.g. 2014-06-29 or 2023-04'
+              )
               .optional(),
             endDate: z
               .string()
@@ -121,7 +128,9 @@ export const resumeSchema = z
                   '^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$'
                 )
               )
-              .describe('e.g. 2014-06-29')
+              .describe(
+                'Similar to the standard date type, but each section after the year is optional. e.g. 2014-06-29 or 2023-04'
+              )
               .optional(),
             summary: z
               .string()
@@ -161,7 +170,9 @@ export const resumeSchema = z
                   '^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$'
                 )
               )
-              .describe('e.g. 2014-06-29')
+              .describe(
+                'Similar to the standard date type, but each section after the year is optional. e.g. 2014-06-29 or 2023-04'
+              )
               .optional(),
             endDate: z
               .string()
@@ -170,7 +181,9 @@ export const resumeSchema = z
                   '^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$'
                 )
               )
-              .describe('e.g. 2014-06-29')
+              .describe(
+                'Similar to the standard date type, but each section after the year is optional. e.g. 2014-06-29 or 2023-04'
+              )
               .optional(),
             summary: z
               .string()
@@ -198,7 +211,8 @@ export const resumeSchema = z
           .object({
             institution: z
               .string()
-              .describe('e.g. Massachusetts Institute of Technology'),
+              .describe('e.g. Massachusetts Institute of Technology')
+              .optional(),
             url: z
               .string()
               .url()
@@ -213,7 +227,9 @@ export const resumeSchema = z
                   '^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$'
                 )
               )
-              .describe('e.g. 2014-06-29')
+              .describe(
+                'Similar to the standard date type, but each section after the year is optional. e.g. 2014-06-29 or 2023-04'
+              )
               .optional(),
             endDate: z
               .string()
@@ -222,7 +238,9 @@ export const resumeSchema = z
                   '^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$'
                 )
               )
-              .describe('e.g. 2014-06-29')
+              .describe(
+                'Similar to the standard date type, but each section after the year is optional. e.g. 2014-06-29 or 2023-04'
+              )
               .optional(),
             score: z
               .string()
@@ -255,7 +273,9 @@ export const resumeSchema = z
                   '^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$'
                 )
               )
-              .describe('e.g. 2014-06-29')
+              .describe(
+                'Similar to the standard date type, but each section after the year is optional. e.g. 2014-06-29 or 2023-04'
+              )
               .optional(),
             awarder: z.string().describe('e.g. Time Magazine').optional(),
             summary: z
@@ -277,7 +297,17 @@ export const resumeSchema = z
               .string()
               .describe('e.g. Certified Kubernetes Administrator')
               .optional(),
-            date: z.string().describe('e.g. 1989-06-12').optional(),
+            date: z
+              .string()
+              .regex(
+                new RegExp(
+                  '^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$'
+                )
+              )
+              .describe(
+                'Similar to the standard date type, but each section after the year is optional. e.g. 2014-06-29 or 2023-04'
+              )
+              .optional(),
             url: z
               .string()
               .url()
@@ -307,7 +337,9 @@ export const resumeSchema = z
                   '^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$'
                 )
               )
-              .describe('e.g. 2014-06-29')
+              .describe(
+                'Similar to the standard date type, but each section after the year is optional. e.g. 2014-06-29 or 2023-04'
+              )
               .optional(),
             url: z
               .string()
@@ -338,7 +370,7 @@ export const resumeSchema = z
               .describe('List some keywords pertaining to this skill')
               .optional(),
           })
-          .strict()
+          .catchall(z.any())
       )
       .describe('List out your professional skill-set')
       .optional(),
@@ -411,7 +443,9 @@ export const resumeSchema = z
                   '^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$'
                 )
               )
-              .describe('e.g. 2014-06-29')
+              .describe(
+                'Similar to the standard date type, but each section after the year is optional. e.g. 2014-06-29 or 2023-04'
+              )
               .optional(),
             endDate: z
               .string()
@@ -420,7 +454,9 @@ export const resumeSchema = z
                   '^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$'
                 )
               )
-              .describe('e.g. 2014-06-29')
+              .describe(
+                'Similar to the standard date type, but each section after the year is optional. e.g. 2014-06-29 or 2023-04'
+              )
               .optional(),
             url: z
               .string()
