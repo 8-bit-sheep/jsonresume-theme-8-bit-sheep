@@ -6,7 +6,7 @@ export const Logo = () => {
       <div>
         &nbsp;
         <Medium>︵</Medium>
-        &nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;
         <Medium>︵</Medium>&nbsp;
         <br />
         <Bold>⁐</Bold>
