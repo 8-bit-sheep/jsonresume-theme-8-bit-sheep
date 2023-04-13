@@ -10,6 +10,8 @@ interface Props {
 }
 
 export const Header: FC<Props> = ({ basics }) => {
+  if (!basics) return null;
+
   return (
     <>
       <NameAndLogo>
@@ -42,7 +44,7 @@ export const Header: FC<Props> = ({ basics }) => {
       </Details>
       <ImageAndSummary>
         {basics.image && <Image src={basics.image} />}
-        <ReactMarkdown>{basics.summary}</ReactMarkdown>
+        {basics.summary && <ReactMarkdown>{basics.summary}</ReactMarkdown>}
       </ImageAndSummary>
     </>
   );
