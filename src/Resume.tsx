@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { Education } from './components/Education';
 import { Header } from './components/Header';
 import { Layout } from './components/Layout';
