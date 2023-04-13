@@ -6,7 +6,7 @@
   "main": "dist/index.js",
   "scripts": {
     "typecheck": "tsc --noEmit",
-    "build": "npm run clean && esbuild src/index.tsx --bundle --outfile=dist/index.js --target=node16 --platform=node && cp index.html dist/index.html",
+    "build": "npm run clean && esbuild src/index.tsx --minify --bundle --outfile=dist/index.js --target=node16 --platform=node && cp index.html dist/index.html",
     "clean": "rm -rf dist",
     "create-example-html": "resume export build/example.html --format html --theme ./dist",
     "create-example-pdf": "resume export build/example.pdf --format pdf --theme ./dist",
