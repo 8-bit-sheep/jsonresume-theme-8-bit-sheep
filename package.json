@@ -6,8 +6,8 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc && cp index.html dist/index.html",
-    "create-example-html": "resume export build/html/example.html --format html --theme ./dist",
-    "create-example-pdf": "resume export build/pdf/example.pdf --format pdf --theme ./dist",
+    "create-example-html": "resume export build/example.html --format html --theme ./dist",
+    "create-example-pdf": "resume export build/example.pdf --format pdf --theme ./dist",
     "dev": "vite",
     "lint": "eslint .",
     "test": "vitest",
