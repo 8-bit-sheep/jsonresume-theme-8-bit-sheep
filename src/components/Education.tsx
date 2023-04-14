@@ -9,7 +9,7 @@ interface Props {
 }
 
 export const Education: FC<Props> = ({ education }) => {
-  if (!education) return null;
+  if (!education || education.length === 0) return null;
 
   return (
     <Section>
