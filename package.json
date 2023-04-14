@@ -1,17 +1,19 @@
 {
   "name": "jsonresume-theme-8-bit-sheep",
-  "version": "1.2.2",
+  "version": "1.3.0-alpha.0",
   "private": false,
   "description": "8-bit-sheep JSON Resume Theme",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc && cp index.html dist/index.html",
+    "typecheck": "tsc --noEmit",
+    "build": "npm run clean && tsup && cp index.html dist/index.html",
+    "clean": "rm -rf dist",
     "create-example-html": "resume export build/example.html --format html --theme ./dist",
     "create-example-pdf": "resume export build/example.pdf --format pdf --theme ./dist",
     "dev": "vite",
     "lint": "eslint .",
     "test": "vitest",
-    "prepack": "npm run build && npm run lint && CI=true npm run test && npm run create-example-html && npm run create-example-pdf"
+    "prepack": "npm run typecheck && npm run lint && CI=true npm run test && npm run build && npm run create-example-html && npm run create-example-pdf"
   },
   "files": [
     "dist"
@@ -52,6 +54,7 @@
     "eslint-plugin-react": "^7.32.2",
     "jsdom": "^21.1.1",
     "resume-cli": "^3.0.8",
+    "tsup": "^6.7.0",
     "typescript": "^5.0.2",
     "vite": "^4.2.1",
     "vitest": "^0.29.8"

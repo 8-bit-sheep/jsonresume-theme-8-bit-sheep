@@ -55,7 +55,7 @@ describe('index', () => {
     try {
       render(resume);
     } catch (e) {
-      expect(e.message).toEqual('oops');
+      expect((e as Error).message).toEqual('oops');
     }
   });
 });
