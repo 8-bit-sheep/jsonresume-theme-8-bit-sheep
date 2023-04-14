@@ -33,22 +33,9 @@ describe('<Interests />', () => {
     expect(screen.getByText('Sheep Farming')).toBeInTheDocument();
   });
 
-  it('should render the interests section with no interests', () => {
+  it('should empty render if interests length is zero', () => {
     const { container } = render(<Interests interests={[]} />);
-    expect(container).toMatchInlineSnapshot(`
-      <div>
-        <section
-          class="sc-beqWaB QCaaT"
-        >
-          <h2>
-            Interests
-          </h2>
-          <ul
-            class="sc-gueYoa dGhEIC"
-          />
-        </section>
-      </div>
-    `);
+    expect(container).toBeEmptyDOMElement();
   });
 
   it('should empty render if no interests', () => {

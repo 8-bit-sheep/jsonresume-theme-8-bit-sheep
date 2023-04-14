@@ -16,4 +16,14 @@ describe('<Projects />', () => {
     );
     expect(screen.getByText(/Markdown/).tagName).toBe('EM');
   });
+
+  it('empty renders if no projects', () => {
+    const { container } = render(<Projects projects={undefined} />);
+    expect(container).toBeEmptyDOMElement();
+  });
+
+  it('empty render if projects length is 0', () => {
+    const { container } = render(<Projects projects={[]} />);
+    expect(container).toBeEmptyDOMElement();
+  });
 });

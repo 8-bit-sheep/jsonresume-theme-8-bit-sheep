@@ -7,13 +7,13 @@ type Props = {
 };
 
 export const Interests: FC<Props> = ({ interests }) => {
-  if (!interests) return null;
+  if (!interests || interests.length === 0) return null;
 
   return (
     <Section>
       <h2>Interests</h2>
       <List>
-        {interests?.map(({ keywords, name }) => (
+        {interests.map(({ keywords, name }) => (
           <ListItem key={name}>
             <h3>{name}</h3>
             <p>{keywords?.join(', ')}</p>

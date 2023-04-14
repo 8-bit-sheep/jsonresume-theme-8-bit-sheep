@@ -9,6 +9,11 @@ describe('<Education />', () => {
     expect(container).toBeEmptyDOMElement();
   });
 
+  it('renders nothing if education lenght is 0', () => {
+    const { container } = render(<Education education={[]} />);
+    expect(container).toBeEmptyDOMElement();
+  });
+
   it('renders education info', () => {
     const { getByText } = render(
       <Education

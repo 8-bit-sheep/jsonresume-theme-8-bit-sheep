@@ -9,6 +9,11 @@ describe('<Work />', () => {
     expect(container).toBeEmptyDOMElement();
   });
 
+  it('renders nothing if work length is 0', () => {
+    const { container } = render(<Work work={[]} />);
+    expect(container).toBeEmptyDOMElement();
+  });
+
   it('renders education info', async () => {
     render(
       <Work

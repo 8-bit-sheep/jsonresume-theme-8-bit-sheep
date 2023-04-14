@@ -16,7 +16,7 @@ type Props = {
 };
 
 export const Projects = ({ projects }: Props) => {
-  if (!projects) return null;
+  if (!projects || projects.length === 0) return null;
 
   return (
     <Section>

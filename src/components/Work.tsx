@@ -9,7 +9,7 @@ interface Props {
 }
 
 export const Work: FC<Props> = ({ work }) => {
-  if (!work) return null;
+  if (!work || work.length === 0) return null;
 
   return (
     <Section>
