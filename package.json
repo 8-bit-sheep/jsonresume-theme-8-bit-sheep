@@ -3,20 +3,21 @@
   "version": "1.4.0",
   "private": false,
   "description": "8-bit-sheep JSON Resume Theme",
-  "main": "dist/index.js",
+  "main": "index.js",
   "scripts": {
     "typecheck": "tsc --noEmit",
-    "build": "npm run clean && tsup && cp index.html dist/index.html",
-    "clean": "rm -rf dist",
-    "create-example-html": "resume export build/example.html --format html --theme ./dist",
-    "create-example-pdf": "resume export build/example.pdf --format pdf --theme ./dist",
+    "build": "npm run clean && tsup",
+    "clean": "rm -f index.js",
+    "create-example-html": "resume export build/example.html --format html --theme .",
+    "create-example-pdf": "resume export build/example.pdf --format pdf --theme .",
     "dev": "vite",
     "lint": "eslint .",
     "test": "vitest",
     "prepack": "npm run typecheck && npm run lint && CI=true npm run test && npm run build && npm run create-example-html && npm run create-example-pdf"
   },
   "files": [
-    "dist"
+    "index.js",
+    "index.html"
   ],
   "repository": {
     "type": "git",
