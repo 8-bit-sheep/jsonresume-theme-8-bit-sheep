@@ -39,6 +39,7 @@ export const LogoContainer = styled.div`
   margin-top: 16px;
   text-align: center;
   font-size: 1.125rem;
+  font-family: 'Helvetica Neue';
 `;
 
 const Medium = styled.span`
