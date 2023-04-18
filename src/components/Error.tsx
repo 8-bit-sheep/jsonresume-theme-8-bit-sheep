@@ -11,8 +11,10 @@ export const Error: FC<{ errors: ZodError }> = ({ errors }) => {
         {errors.errors.map((error) => (
           <ListItem key={error.path.join(', ')}>
             <h2>{error.message}</h2>
-            <div>{error.code}</div>
-            <div>JSON path: {error.path.join(' > ')}</div>
+            <div>
+              {error.code} at{' '}
+              {error.path.map((error) => `"${error}"`).join(' > ')}
+            </div>
           </ListItem>
         ))}
       </List>
