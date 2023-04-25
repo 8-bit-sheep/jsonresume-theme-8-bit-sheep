@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   test: {
     globals: true,
-    exclude: [...configDefaults.exclude],
+    exclude: [...configDefaults.exclude, 'index.js'],
     environment: 'jsdom',
     setupFiles: './test/setup.ts',
     coverage: {
@@ -16,6 +16,7 @@ export default defineConfig({
         '**/*.test.*',
         '**/*/coverage',
         '**/*/client.tsx',
+        'index.js',
       ],
       provider: 'c8',
     },

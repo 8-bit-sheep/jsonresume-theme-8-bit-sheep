@@ -7,7 +7,6 @@ import { Projects } from './components/Projects';
 import { SkillsAndLanguages } from './components/SkillsAndLanguages';
 import { Work } from './components/Work';
 import { ResumeSchema } from './schema';
-import { GlobalStyle } from './styles/GlobalStyle';
 
 interface Props {
   resume: ResumeSchema;
@@ -16,7 +15,6 @@ interface Props {
 export const Resume: FC<Props> = ({ resume }) => {
   return (
     <Layout>
-      <GlobalStyle />
       <Header basics={resume.basics} />
       <Work work={resume.work} />
       <Projects projects={resume.projects} />
