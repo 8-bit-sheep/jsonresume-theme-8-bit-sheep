@@ -14,7 +14,7 @@ describe('<ClientApp />', () => {
             url: '',
           },
         }}
-      />
+      />,
     );
     expect(screen.getByText('resume.json is invalid')).toBeInTheDocument();
     expect(screen.getByText(/invalid_string/)).toBeInTheDocument();

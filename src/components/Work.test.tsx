@@ -28,13 +28,13 @@ describe('<Work />', () => {
             url: 'https://www.workplace.com',
           },
         ]}
-      />
+      />,
     );
     expect(screen.getByText('Workplace')).toBeInTheDocument();
     expect(screen.getByText('Workplace').parentElement?.tagName).toBe('A');
     expect(screen.getByText('CEO')).toBeInTheDocument();
     expect(
-      screen.getByText('September 2018 - September 2018')
+      screen.getByText('September 2018 - September 2018'),
     ).toBeInTheDocument();
   });
 
@@ -46,7 +46,7 @@ describe('<Work />', () => {
             name: 'Workplace',
           },
         ]}
-      />
+      />,
     );
     expect(screen.getByText('Workplace')).toBeInTheDocument();
   });

@@ -16,7 +16,7 @@ export const SkillsAndLanguages: FC<Props> = ({ skills, languages }) => {
           <SkillList>
             {[...skills]
               ?.sort(
-                (a, b) => (b.keywords?.length ?? 0) - (a.keywords?.length ?? 0)
+                (a, b) => (b.keywords?.length ?? 0) - (a.keywords?.length ?? 0),
               )
               ?.map((skill, index) => (
                 <ListItem key={index}>

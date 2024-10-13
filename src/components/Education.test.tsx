@@ -27,7 +27,7 @@ describe('<Education />', () => {
             endDate: '2021-06-01',
           },
         ]}
-      />
+      />,
     );
     expect(getByText('BSc')).toBeInTheDocument();
     expect(getByText('University of Life')).toBeInTheDocument();
@@ -42,7 +42,7 @@ describe('<Education />', () => {
             institution: 'University of Life',
           },
         ]}
-      />
+      />,
     );
     expect(getByText('University of Life')).toBeInTheDocument();
   });

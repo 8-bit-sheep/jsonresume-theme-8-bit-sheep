@@ -12,7 +12,7 @@ describe('<Projects />', () => {
             description: '*Markdown* should work',
           },
         ]}
-      />
+      />,
     );
     expect(screen.getByText(/Markdown/).tagName).toBe('EM');
   });
