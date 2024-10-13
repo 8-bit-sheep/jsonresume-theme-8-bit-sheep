@@ -37,14 +37,14 @@ describe('index', () => {
     const html = render(resume);
     if (!html) throw new Error('html is undefined');
     const $ = cheerio.load(html);
-    expect($('head>title').html()).toEqual('P&#xE4;ssi Villanen | 8-bit-sheep');
+    expect($('head > title').html()).toEqual('Pässi Villanen | 8-bit-sheep');
   });
 
   it('sets the document title for CV without basics.name', () => {
     const html = render({ ...resume, basics: { ...resume.basics, name: '' } });
     if (!html) throw new Error('html is undefined');
     const $ = cheerio.load(html);
-    expect($('head>title').html()).toEqual('8-bit-sheep');
+    expect($('head > title').html()).toEqual('8-bit-sheep');
   });
 
   it('handles error', async () => {
