@@ -1,14 +1,15 @@
 {
   "compilerOptions": {
-    "target": "es2016",
-    "lib": ["ESNext", "DOM"],
-    "jsx": "react-jsx",
-    "module": "commonjs",
-    "resolveJsonModule": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
+    "jsx": "react-jsx",
+    "lib": ["ESNext", "DOM"],
+    "module": "commonjs",
     "noImplicitAny": true,
-    "skipLibCheck": true
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "es2016",
+    "types": ["vitest/globals", "@testing-library/jest-dom"]
   }
 }
