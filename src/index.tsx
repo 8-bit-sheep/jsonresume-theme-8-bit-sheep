@@ -10,7 +10,7 @@ export const render = (resume: unknown) => {
   try {
     const parsedResume = resumeSchema.parse(resume);
     const renderResult = renderToString(
-      sheet.collectStyles(<Resume resume={parsedResume} />)
+      sheet.collectStyles(<Resume resume={parsedResume} />),
     );
     const styleTags = sheet.getStyleTags();
     const htmlFile = readFileSync(`${__dirname}/index.html`, 'utf8');
@@ -18,7 +18,7 @@ export const render = (resume: unknown) => {
     $('head>title').text(
       `${
         parsedResume.basics?.name ? `${parsedResume.basics.name} | ` : ''
-      }8-bit-sheep`
+      }8-bit-sheep`,
     );
     $('head').append(styleTags);
     $('#root').remove();

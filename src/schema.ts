@@ -15,7 +15,7 @@ export const resumeSchema = z
       .string()
       .url()
       .describe(
-        'link to the version of the schema that can validate the resume'
+        'link to the version of the schema that can validate the resume',
       )
       .optional(),
     basics: z
@@ -30,14 +30,14 @@ export const resumeSchema = z
         phone: z
           .string()
           .describe(
-            'Phone numbers are stored as strings so use any format you like, e.g. 712-117-2923'
+            'Phone numbers are stored as strings so use any format you like, e.g. 712-117-2923',
           )
           .optional(),
         url: z
           .string()
           .url()
           .describe(
-            'URL (as per RFC 3986) to your website, e.g. personal homepage'
+            'URL (as per RFC 3986) to your website, e.g. personal homepage',
           )
           .optional(),
         summary: z
@@ -49,7 +49,7 @@ export const resumeSchema = z
             address: z
               .string()
               .describe(
-                'To add multiple address lines, use \n. For example, 1234 Glücklichkeit Straße\nHinterhaus 5. Etage li.'
+                'To add multiple address lines, use \n. For example, 1234 Glücklichkeit Straße\nHinterhaus 5. Etage li.',
               )
               .optional(),
             postalCode: z.string().optional(),
@@ -61,7 +61,7 @@ export const resumeSchema = z
             region: z
               .string()
               .describe(
-                'The general region where you live. Can be a US state, or a province, for instance.'
+                'The general region where you live. Can be a US state, or a province, for instance.',
               )
               .optional(),
           })
@@ -85,10 +85,10 @@ export const resumeSchema = z
                   .describe('e.g. http://twitter.example.com/neutralthoughts')
                   .optional(),
               })
-              .strict()
+              .strict(),
           )
           .describe(
-            'Specify any number of social networks that you participate in'
+            'Specify any number of social networks that you participate in',
           )
           .optional(),
       })
@@ -114,28 +114,28 @@ export const resumeSchema = z
               .string()
               .regex(
                 new RegExp(
-                  '^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$'
-                )
+                  '^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$',
+                ),
               )
               .describe(
-                'Similar to the standard date type, but each section after the year is optional. e.g. 2014-06-29 or 2023-04'
+                'Similar to the standard date type, but each section after the year is optional. e.g. 2014-06-29 or 2023-04',
               )
               .optional(),
             endDate: z
               .string()
               .regex(
                 new RegExp(
-                  '^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$'
-                )
+                  '^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$',
+                ),
               )
               .describe(
-                'Similar to the standard date type, but each section after the year is optional. e.g. 2014-06-29 or 2023-04'
+                'Similar to the standard date type, but each section after the year is optional. e.g. 2014-06-29 or 2023-04',
               )
               .optional(),
             summary: z
               .string()
               .describe(
-                'Give an overview of your responsibilities at the company'
+                'Give an overview of your responsibilities at the company',
               )
               .optional(),
             highlights: z
@@ -143,13 +143,13 @@ export const resumeSchema = z
                 z
                   .string()
                   .describe(
-                    'e.g. Increased profits by 20% from 2011-2012 through viral advertising'
-                  )
+                    'e.g. Increased profits by 20% from 2011-2012 through viral advertising',
+                  ),
               )
               .describe('Specify multiple accomplishments')
               .optional(),
           })
-          .strict()
+          .strict(),
       )
       .optional(),
     volunteer: z
@@ -167,28 +167,28 @@ export const resumeSchema = z
               .string()
               .regex(
                 new RegExp(
-                  '^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$'
-                )
+                  '^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$',
+                ),
               )
               .describe(
-                'Similar to the standard date type, but each section after the year is optional. e.g. 2014-06-29 or 2023-04'
+                'Similar to the standard date type, but each section after the year is optional. e.g. 2014-06-29 or 2023-04',
               )
               .optional(),
             endDate: z
               .string()
               .regex(
                 new RegExp(
-                  '^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$'
-                )
+                  '^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$',
+                ),
               )
               .describe(
-                'Similar to the standard date type, but each section after the year is optional. e.g. 2014-06-29 or 2023-04'
+                'Similar to the standard date type, but each section after the year is optional. e.g. 2014-06-29 or 2023-04',
               )
               .optional(),
             summary: z
               .string()
               .describe(
-                'Give an overview of your responsibilities at the company'
+                'Give an overview of your responsibilities at the company',
               )
               .optional(),
             highlights: z
@@ -196,13 +196,13 @@ export const resumeSchema = z
                 z
                   .string()
                   .describe(
-                    'e.g. Increased profits by 20% from 2011-2012 through viral advertising'
-                  )
+                    'e.g. Increased profits by 20% from 2011-2012 through viral advertising',
+                  ),
               )
               .describe('Specify accomplishments and achievements')
               .optional(),
           })
-          .strict()
+          .strict(),
       )
       .optional(),
     education: z
@@ -224,22 +224,22 @@ export const resumeSchema = z
               .string()
               .regex(
                 new RegExp(
-                  '^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$'
-                )
+                  '^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$',
+                ),
               )
               .describe(
-                'Similar to the standard date type, but each section after the year is optional. e.g. 2014-06-29 or 2023-04'
+                'Similar to the standard date type, but each section after the year is optional. e.g. 2014-06-29 or 2023-04',
               )
               .optional(),
             endDate: z
               .string()
               .regex(
                 new RegExp(
-                  '^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$'
-                )
+                  '^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$',
+                ),
               )
               .describe(
-                'Similar to the standard date type, but each section after the year is optional. e.g. 2014-06-29 or 2023-04'
+                'Similar to the standard date type, but each section after the year is optional. e.g. 2014-06-29 or 2023-04',
               )
               .optional(),
             score: z
@@ -250,12 +250,12 @@ export const resumeSchema = z
               .array(
                 z
                   .string()
-                  .describe('e.g. H1302 - Introduction to American history')
+                  .describe('e.g. H1302 - Introduction to American history'),
               )
               .describe('List notable courses/subjects')
               .optional(),
           })
-          .strict()
+          .strict(),
       )
       .optional(),
     awards: z
@@ -270,11 +270,11 @@ export const resumeSchema = z
               .string()
               .regex(
                 new RegExp(
-                  '^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$'
-                )
+                  '^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$',
+                ),
               )
               .describe(
-                'Similar to the standard date type, but each section after the year is optional. e.g. 2014-06-29 or 2023-04'
+                'Similar to the standard date type, but each section after the year is optional. e.g. 2014-06-29 or 2023-04',
               )
               .optional(),
             awarder: z.string().describe('e.g. Time Magazine').optional(),
@@ -283,10 +283,10 @@ export const resumeSchema = z
               .describe('e.g. Received for my work with Quantum Physics')
               .optional(),
           })
-          .strict()
+          .strict(),
       )
       .describe(
-        'Specify any awards you have received throughout your professional career'
+        'Specify any awards you have received throughout your professional career',
       )
       .optional(),
     certificates: z
@@ -301,11 +301,11 @@ export const resumeSchema = z
               .string()
               .regex(
                 new RegExp(
-                  '^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$'
-                )
+                  '^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$',
+                ),
               )
               .describe(
-                'Similar to the standard date type, but each section after the year is optional. e.g. 2014-06-29 or 2023-04'
+                'Similar to the standard date type, but each section after the year is optional. e.g. 2014-06-29 or 2023-04',
               )
               .optional(),
             url: z
@@ -315,10 +315,10 @@ export const resumeSchema = z
               .optional(),
             issuer: z.string().describe('e.g. CNCF').optional(),
           })
-          .strict()
+          .strict(),
       )
       .describe(
-        'Specify any certificates you have received throughout your professional career'
+        'Specify any certificates you have received throughout your professional career',
       )
       .optional(),
     publications: z
@@ -334,28 +334,28 @@ export const resumeSchema = z
               .string()
               .regex(
                 new RegExp(
-                  '^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$'
-                )
+                  '^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$',
+                ),
               )
               .describe(
-                'Similar to the standard date type, but each section after the year is optional. e.g. 2014-06-29 or 2023-04'
+                'Similar to the standard date type, but each section after the year is optional. e.g. 2014-06-29 or 2023-04',
               )
               .optional(),
             url: z
               .string()
               .url()
               .describe(
-                'e.g. http://www.computer.org.example.com/csdl/mags/co/1996/10/rx069-abs.html'
+                'e.g. http://www.computer.org.example.com/csdl/mags/co/1996/10/rx069-abs.html',
               )
               .optional(),
             summary: z
               .string()
               .describe(
-                'Short summary of publication. e.g. Discussion of the World Wide Web, HTTP, HTML.'
+                'Short summary of publication. e.g. Discussion of the World Wide Web, HTTP, HTML.',
               )
               .optional(),
           })
-          .strict()
+          .strict(),
       )
       .describe('Specify your publications through your career')
       .optional(),
@@ -370,7 +370,7 @@ export const resumeSchema = z
               .describe('List some keywords pertaining to this skill')
               .optional(),
           })
-          .catchall(z.any())
+          .catchall(z.any()),
       )
       .describe('List out your professional skill-set')
       .optional(),
@@ -381,7 +381,7 @@ export const resumeSchema = z
             language: z.string().describe('e.g. English, Spanish').optional(),
             fluency: z.string().describe('e.g. Fluent, Beginner').optional(),
           })
-          .strict()
+          .strict(),
       )
       .describe('List any other languages you speak')
       .optional(),
@@ -394,7 +394,7 @@ export const resumeSchema = z
               .array(z.string().describe('e.g. Friedrich Nietzsche'))
               .optional(),
           })
-          .strict()
+          .strict(),
       )
       .optional(),
     references: z
@@ -405,11 +405,11 @@ export const resumeSchema = z
             reference: z
               .string()
               .describe(
-                'e.g. Joe blogs was a great employee, who turned up to work at least once a week. He exceeded my expectations when it came to doing nothing.'
+                'e.g. Joe blogs was a great employee, who turned up to work at least once a week. He exceeded my expectations when it came to doing nothing.',
               )
               .optional(),
           })
-          .strict()
+          .strict(),
       )
       .describe('List references you have received')
       .optional(),
@@ -421,14 +421,14 @@ export const resumeSchema = z
             description: z
               .string()
               .describe(
-                'Short summary of project. e.g. Collated works of 2017.'
+                'Short summary of project. e.g. Collated works of 2017.',
               )
               .optional(),
             highlights: z
               .array(
                 z
                   .string()
-                  .describe('e.g. Directs you close but not quite there')
+                  .describe('e.g. Directs you close but not quite there'),
               )
               .describe('Specify multiple features')
               .optional(),
@@ -440,29 +440,29 @@ export const resumeSchema = z
               .string()
               .regex(
                 new RegExp(
-                  '^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$'
-                )
+                  '^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$',
+                ),
               )
               .describe(
-                'Similar to the standard date type, but each section after the year is optional. e.g. 2014-06-29 or 2023-04'
+                'Similar to the standard date type, but each section after the year is optional. e.g. 2014-06-29 or 2023-04',
               )
               .optional(),
             endDate: z
               .string()
               .regex(
                 new RegExp(
-                  '^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$'
-                )
+                  '^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$',
+                ),
               )
               .describe(
-                'Similar to the standard date type, but each section after the year is optional. e.g. 2014-06-29 or 2023-04'
+                'Similar to the standard date type, but each section after the year is optional. e.g. 2014-06-29 or 2023-04',
               )
               .optional(),
             url: z
               .string()
               .url()
               .describe(
-                'e.g. http://www.computer.org/csdl/mags/co/1996/10/rx069-abs.html'
+                'e.g. http://www.computer.org/csdl/mags/co/1996/10/rx069-abs.html',
               )
               .optional(),
             roles: z
@@ -472,17 +472,17 @@ export const resumeSchema = z
             entity: z
               .string()
               .describe(
-                "Specify the relevant company/entity affiliations e.g. 'greenpeace', 'corporationXYZ'"
+                "Specify the relevant company/entity affiliations e.g. 'greenpeace', 'corporationXYZ'",
               )
               .optional(),
             type: z
               .string()
               .describe(
-                " e.g. 'volunteering', 'presentation', 'talk', 'application', 'conference'"
+                " e.g. 'volunteering', 'presentation', 'talk', 'application', 'conference'",
               )
               .optional(),
           })
-          .strict()
+          .strict(),
       )
       .describe('Specify career projects')
       .optional(),
@@ -503,7 +503,7 @@ export const resumeSchema = z
           .optional(),
       })
       .describe(
-        'The schema version and any other tooling configuration lives here'
+        'The schema version and any other tooling configuration lives here',
       )
       .strict()
       .optional(),

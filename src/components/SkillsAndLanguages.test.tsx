@@ -20,7 +20,7 @@ describe('<SkillsAndLanguages />', () => {
           {},
         ]}
         languages={[]}
-      />
+      />,
     );
     expect(screen.getAllByRole('listitem')[0].textContent).toBe('Aabc');
     expect(screen.getAllByRole('listitem')[1].textContent).toBe('Bab');
@@ -34,13 +34,13 @@ describe('<SkillsAndLanguages />', () => {
           { language: 'English', fluency: 'Native' },
           { language: 'Spanish', fluency: 'Fluent' },
         ]}
-      />
+      />,
     );
     expect(screen.getAllByRole('listitem')[0].textContent).toBe(
-      'EnglishNative'
+      'EnglishNative',
     );
     expect(screen.getAllByRole('listitem')[1].textContent).toBe(
-      'SpanishFluent'
+      'SpanishFluent',
     );
   });
 });

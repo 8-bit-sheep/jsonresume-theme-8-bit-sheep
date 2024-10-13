@@ -12,10 +12,10 @@ describe('<Interests />', () => {
             keywords: ['Breeding', 'Fleece Production', 'Lambing', 'Shearing'],
           },
         ]}
-      />
+      />,
     );
     expect(
-      screen.getByText('Breeding, Fleece Production, Lambing, Shearing')
+      screen.getByText('Breeding, Fleece Production, Lambing, Shearing'),
     ).toBeInTheDocument();
   });
 
@@ -28,7 +28,7 @@ describe('<Interests />', () => {
             keywords: [],
           },
         ]}
-      />
+      />,
     );
     expect(screen.getByText('Sheep Farming')).toBeInTheDocument();
   });

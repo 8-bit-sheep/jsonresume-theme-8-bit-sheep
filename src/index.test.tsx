@@ -22,7 +22,7 @@ vi.mock('fs', async () => {
         <script type="module" src="/src/client.tsx"></script>
       </body>
     </html>
-    `
+    `,
     ),
   };
 });

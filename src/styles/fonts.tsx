@@ -40,7 +40,16 @@ export const fonts = css`
   }
 
   body {
-    font-family: 'Helvetica Neue LT Pro', -apple-system, BlinkMacSystemFont,
-      'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+    font-family:
+      'Helvetica Neue LT Pro',
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell,
+      'Open Sans',
+      sans-serif;
   }
 `;
