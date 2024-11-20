@@ -31,10 +31,10 @@
   "homepage": "https://github.com/8-bit-sheep/jsonresume-theme-8-bit-sheep#readme",
   "dependencies": {
     "cheerio": "^1.0.0",
-    "date-fns": "^2.29.3",
+    "date-fns": "^4.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-markdown": "^6.0.3",
+    "react-markdown": "^8.0.7",
     "styled-components": "^6.1.13",
     "styled-normalize": "^8.1.1",
     "zod": "^3.21.4"
