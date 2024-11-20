@@ -4,6 +4,16 @@ updates:
     directory: '/'
     schedule:
       interval: 'weekly'
+    groups:
+      production-major:
+        dependency-type: 'production'
+        update-types: ['major']
+      production-minor-patch:
+        dependency-type: 'production'
+        update-types: ['minor', 'patch']
+      development:
+        dependency-type: 'development'
+
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
