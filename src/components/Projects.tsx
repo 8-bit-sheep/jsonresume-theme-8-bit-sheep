@@ -1,4 +1,4 @@
-import ReactMarkdown from 'react-markdown';
+import Markdown from 'markdown-to-jsx';
 import { formatDate } from '../helpers/date';
 import { ResumeSchema } from '../schema';
 import {
@@ -40,7 +40,7 @@ export const Projects = ({ projects }: Props) => {
             <WorkPosition>{project.roles?.join(', ')}</WorkPosition>
             {project.description && (
               <SummaryDescription>
-                <ReactMarkdown>{project.description}</ReactMarkdown>
+                <Markdown>{project.description}</Markdown>
               </SummaryDescription>
             )}
           </ListItem>

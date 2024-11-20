@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import ReactMarkdown from 'react-markdown';
+import Markdown from 'markdown-to-jsx';
 import styled from 'styled-components';
 import { beautifyUrl } from '../helpers/url';
 import { ResumeSchema } from '../schema';
@@ -44,7 +44,7 @@ export const Header: FC<Props> = ({ basics }) => {
       </Details>
       <ImageAndSummary>
         {basics.image && <Image src={basics.image} />}
-        {basics.summary && <ReactMarkdown>{basics.summary}</ReactMarkdown>}
+        {basics.summary && <Markdown>{basics.summary}</Markdown>}
       </ImageAndSummary>
     </>
   );

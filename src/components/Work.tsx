@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import ReactMarkdown from 'react-markdown';
+import Markdown from 'markdown-to-jsx';
 import styled from 'styled-components';
 import { formatDate } from '../helpers/date';
 import { ResumeSchema } from '../schema';
@@ -31,7 +31,7 @@ export const Work: FC<Props> = ({ work }) => {
             {work.position && <WorkPosition>{work.position}</WorkPosition>}
             {work.summary && (
               <SummaryDescription>
-                <ReactMarkdown>{work.summary}</ReactMarkdown>
+                <Markdown>{work.summary}</Markdown>
               </SummaryDescription>
             )}
           </ListItem>
