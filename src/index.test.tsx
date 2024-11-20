@@ -4,12 +4,11 @@ import { vi } from 'vitest';
 import resume from '../resume.json';
 import { render } from './index';
 
-vi.mock('fs', async () => {
-  const actual = await vi.importActual<typeof import('fs')>('fs');
+vi.mock('fs');
 
-  return {
-    ...actual,
-    readFileSync: vi.fn(
+describe('index', () => {
+  beforeAll(() => {
+    vi.mocked(readFileSync).mockImplementation(
       () => `<!DOCTYPE html>
     <html lang="en">
       <head>
@@ -23,11 +22,9 @@ vi.mock('fs', async () => {
       </body>
     </html>
     `,
-    ),
-  };
-});
+    );
+  });
 
-describe('index', () => {
   it('renders the html with styles', () => {
     const html = render(resume);
     expect(html).toContain('<style');
