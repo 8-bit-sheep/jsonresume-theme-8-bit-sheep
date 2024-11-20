@@ -18,7 +18,7 @@ export default defineConfig({
         '**/*/client.tsx',
         'index.js',
       ],
-      provider: 'c8',
+      provider: 'v8',
     },
   },
 });
